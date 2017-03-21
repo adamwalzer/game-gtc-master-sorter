@@ -50,12 +50,13 @@ let audioArray = _.map(audioRefs, (v, k) => {
             type: 'voiceOver',
             src: `${CMWN.MEDIA.GAME + 'sound-assets/_vositems/' + v}.mp3`,
             checkReady: false,
+            ready: true,
             onPlay: function () {
                 this.updateScreenData({
                     keys: ['item', 'new'],
                     data: false,
                 });
-            }
+            },
         },
     };
 });
@@ -168,8 +169,19 @@ skoash.start(
                 src={`${MEDIA.EFFECT}NextAppear.mp3`}
                 volume={3}
             />,
-            <skoash.Audio ref="BKG0" type="background" src={`${CMWN.MEDIA.EFFECT}titlescreen.mp3`} loop />,
-            <skoash.Audio ref="BKG5" type="background" src={`${CMWN.MEDIA.EFFECT}BKG5.mp3`} loop />,
+            <skoash.Audio
+                ref="BKG0"
+                type="background"
+                src={`${CMWN.MEDIA.EFFECT}titlescreen.mp3`}
+                unloadIndex={3}
+                loop
+            />,
+            <skoash.Audio
+                ref="BKG5"
+                type="background"
+                src={`${CMWN.MEDIA.EFFECT}BKG5.mp3`}
+                loop
+            />,
             <div className="background title" />,
             <div className="background bkg1" />,
             <div className="background bkg2" />,
