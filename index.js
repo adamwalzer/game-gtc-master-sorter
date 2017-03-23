@@ -96,6 +96,10 @@ skoash.start(
         }}
         assets={[
             <skoash.SpriteCSS
+                src={`${CMWN.MEDIA.SPRITE}lunch-trays`}
+                spriteClass="lunch-tray"
+            />,
+            <skoash.SpriteCSS
                 src={`${CMWN.MEDIA.SPRITE}_recycle`}
                 spriteClass="recycle-item"
             />,

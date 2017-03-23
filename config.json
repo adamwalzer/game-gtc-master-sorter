@@ -2,7 +2,7 @@
     "id": "gtc-master-sorter",
     "media_folder": "green-team-challenge",
     "version": 1,
-    "skoash": "1.1.6",
+    "skoash": "1.1.7",
     "head_injection": "",
     "dimensions": {
         "width": 960,
