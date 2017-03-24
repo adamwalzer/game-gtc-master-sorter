@@ -25,23 +25,9 @@ import NowAMemberScreen from 'game-green-team-challenge/components/now_a_member_
 
 import QuitScreen from 'game-green-team-challenge/components/quit_screen';
 
-import ItemsToSort from 'game-green-team-challenge/components/items_to_sort';
+import itemsToSort from 'game-green-team-challenge/components/master_items_to_sort';
 
-let binNames = [
-    'recycle',
-    'landfill',
-    'compost',
-    'liquids',
-    'food-share',
-];
-
-let itemsToSort = _.filter(ItemsToSort, item => _.includes(binNames, item.bin));
-
-let audioRefs = _.uniq(_.map(itemsToSort, v =>
-    _.kebabCase(_.replace(v.name, /\d+/g, '')))
-);
-
-let audioArray = _.map(audioRefs, (v, k) => {
+let audioArray = _.map(itemsToSort, (v, k) => {
     return {
         type: skoash.Audio,
         ref: v,
